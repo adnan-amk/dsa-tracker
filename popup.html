@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="head">
+    <h1>DSA Tracker</h1>
+    <button id="gear" title="Settings">⚙</button>
+  </div>
+
+  <div id="main">
+    <div id="banner" class="banner hidden"></div>
+
+    <label>Question</label>
+    <input id="question" type="text">
+
+    <label>Link</label>
+    <input id="link" type="text">
+
+    <div class="row">
+      <div>
+        <label>Type</label>
+        <input id="type" list="types" placeholder="e.g. Array">
+        <datalist id="types">
+          <option>Array</option><option>String</option><option>Linked List</option>
+          <option>Stack</option><option>Queue</option><option>Hashing</option>
+          <option>Two Pointers</option><option>Sliding Window</option>
+          <option>Binary Search</option><option>Recursion</option><option>Backtracking</option>
+          <option>Tree</option><option>BST</option><option>Heap</option><option>Graph</option>
+          <option>Greedy</option><option>DP</option><option>Trie</option>
+          <option>Bit Manipulation</option><option>Math</option>
+        </datalist>
+      </div>
+      <div>
+        <label>Difficulty</label>
+        <select id="difficulty">
+          <option>Easy</option><option selected>Medium</option><option>Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="save" class="primary">Save to sheet</button>
+    <div id="status"></div>
+  </div>
+
+  <div id="settings" class="hidden">
+    <label>Apps Script Web App URL</label>
+    <input id="url" type="text" placeholder="https://script.google.com/macros/s/.../exec">
+    <label>Secret</label>
+    <input id="secret" type="text">
+    <button id="saveSettings" class="primary">Save settings</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
